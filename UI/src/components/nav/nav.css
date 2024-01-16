@@ -1,0 +1,11 @@
+.nav-button {
+  height: 100%;
+  width: 24vw;
+  padding: 2vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selected {
+  background-color: blue;
+}

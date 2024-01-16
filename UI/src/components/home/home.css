@@ -1,0 +1,14 @@
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding: 100px 0 0 0;
+  background-color: antiquewhite;
+}
+
+.social-media {
+  display: flex;
+  gap: 20px;
+}

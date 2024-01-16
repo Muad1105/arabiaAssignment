@@ -6,7 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-
+import "./table.css";
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
@@ -26,10 +26,10 @@ export default function TableChar() {
   };
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} style={{background:"silver", height:"100vh"}}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead sx={{ borderBottom: "2px solid #838383" }}>
-          <TableRow>
+          <TableRow style={{ background: "rgb(253, 253, 113)" }}>
             <TableCell align="center">ID</TableCell>
             <TableCell align="center">Name</TableCell>
             <TableCell align="center">Quantity</TableCell>
@@ -37,8 +37,9 @@ export default function TableChar() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {tableData.map((row, i) => (
+          {tableData.map((row, index) => (
             <TableRow
+              className={index % 2 == 0 ? "bg-gray" : "bg-blue"}
               key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
